@@ -1,0 +1,73 @@
+[
+    {
+        "id": 1,
+        "hostname": "mta-prod-1",
+        "ip": "127.0.0.1",
+        "active":true
+    },
+    {
+        "id": 2,
+        "hostname": "mta-prod-2",
+        "ip": "127.0.0.2",
+        "active": true
+    },
+    {
+        "id": 3,
+        "hostname": "mta-prod-1",
+        "ip": "127.0.0.3",
+        "active": false
+    },
+    {
+        "id": 2,
+        "hostname": "mta-prod-1",
+        "ip": "127.0.0.2",
+        "active": true
+    },
+    {
+        "id": 3,
+        "hostname": "mta-prod-1",
+        "ip": "127.0.0.3",
+        "active": false
+    },
+    {
+        "id": 2,
+        "hostname": "mta-prod-2",
+        "ip": "127.0.0.2",
+        "active": true
+    },
+    {
+        "id": 3,
+        "hostname": "mta-prod-2",
+        "ip": "127.0.0.3",
+        "active": false
+    },
+    {
+        "id": 2,
+        "hostname": "mta-prod-3",
+        "ip": "127.0.0.2",
+        "active": true
+    },
+    {
+        "id": 3,
+        "hostname": "mta-prod-1",
+        "ip": "127.0.0.3",
+        "active": true
+    },
+    {
+        "id": 3,
+        "hostname": "mta-prod-4",
+        "ip": "127.0.0.3",
+        "active": false
+    },
+    {
+        "id": 3,
+        "hostname": "mta-prod-5",
+        "ip": "127.0.0.3",
+        "active": false
+    },{
+        "id": 3,
+        "hostname": "mta-prod-6",
+        "ip": "127.0.0.3",
+        "active": false
+    }
+]
