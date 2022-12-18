@@ -15,3 +15,4 @@ $ make run
 ```
 make local-cover
 ```
+* To mock the service for IP Data, I have used data in test.json file in repo.
