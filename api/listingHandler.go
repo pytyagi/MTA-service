@@ -15,8 +15,23 @@ func NewListingHandler(IpDataService service.IpDataServiceInterface) ListingHand
 		IpDataService: IpDataService,
 	}
 }
+
+type ListingResponse struct {
+	InefficientServers []string
+}
+
+// ListInefficientServersHandler godoc
+// @Summary ListInefficientServersHandler
+// @Description List inefficient servers
+// @Accept  json
+// @Produce  json
+// @Success 200 {object} ListingResponse
+// @Failure 500
+// @Router /hosts [get]
+
 func (l *ListingHandler) ListInefficientServersHandler(w http.ResponseWriter, r *http.Request) {
 
+	// Get Data from mock service
 	ipData, err := l.IpDataService.GetServiceIpData()
 	if err != nil {
 		w.WriteHeader(500)
@@ -24,7 +39,11 @@ func (l *ListingHandler) ListInefficientServersHandler(w http.ResponseWriter, r 
 		return
 	}
 
+	// Get the GetInefficientServers from list of servers
 	inefficientHosts := l.IpDataService.GetInefficientServers(ipData)
 	w.Header().Set("Content-Type", "application/json")
-	json.NewEncoder(w).Encode(inefficientHosts)
+	resp := ListingResponse{
+		InefficientServers: inefficientHosts,
+	}
+	json.NewEncoder(w).Encode(resp.InefficientServers)
 }

@@ -30,6 +30,8 @@ type IpDataService struct {
 func NewIpDataService(httpClient *http.Client) *IpDataService {
 	return &IpDataService{HTTPClient: httpClient}
 }
+
+// GetServiceIpData from mock service using simple HTTP GET call.
 func (m *IpDataService) GetServiceIpData() (*[]IpConfig, error) {
 	log.Println("Getting IpConfig from mock services")
 
@@ -62,6 +64,7 @@ func (m *IpDataService) GetServiceIpData() (*[]IpConfig, error) {
 	return &ServerData, nil
 }
 
+// GetInefficientServers by filter with Active and Non-Active Status
 func (m *IpDataService) GetInefficientServers(ipData *[]IpConfig) []string {
 	hostnameMap := make(map[string]Pair)
 	for _, val := range *ipData {
