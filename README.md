@@ -16,3 +16,4 @@ $ make run
 make local-cover
 ```
 * To mock the service for IP Data, I have used data in test.json file in repo.
+* CI/CD is configured using Github Actions on each git push pipeline for test and build will run.
